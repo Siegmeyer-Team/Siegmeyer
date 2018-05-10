@@ -3,9 +3,7 @@ const request = require('request');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
 
-exports.run = ((config, message, args) => {
-
-  const client = message.client;
+exports.run = ((client, message, args) => {
   const map_id = args.join(' ');
   
   if (!map_id) return message.channel.send('Specify an approved map to fetch.');
